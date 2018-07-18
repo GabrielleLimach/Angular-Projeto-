@@ -1,7 +1,7 @@
-import { MaterialService } from './../../services/material.service';
+import { MaterialService } from 'services/material.service';
 import { Component, OnInit } from '@angular/core';
 
-import { Material } from './../../core/model';
+import { Material } from 'core/model';
 
 declare interface TableData {
     headerRow: string[];

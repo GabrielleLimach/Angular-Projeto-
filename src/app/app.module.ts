@@ -18,7 +18,7 @@ import { MaterialComponent } from './material/material.component';
 import { TablesComponent } from './tables/tables.component';
 import { TypographyComponent } from './typography/typography.component';
 import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
+import { RelatoriosComponent } from './Relatorios/relatorios.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     TablesComponent,
     TypographyComponent,
     IconsComponent,
-    MapsComponent,
+    RelatoriosComponent,
     NotificationsComponent
 
   ],

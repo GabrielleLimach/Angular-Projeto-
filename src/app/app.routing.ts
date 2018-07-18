@@ -8,7 +8,7 @@ import { MaterialComponent } from './material/material.component';
 import { TablesComponent } from './tables/tables.component';
 import { TypographyComponent } from './typography/typography.component';
 import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
+import { RelatoriosComponent } from './Relatorios/relatorios.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 
 
@@ -18,7 +18,7 @@ const routes: Routes =[
     { path: 'table',          component: TablesComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
+    { path: 'relatorios',     component: RelatoriosComponent },
     { path: 'notifications',  component: NotificationsComponent },
       { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
 ];

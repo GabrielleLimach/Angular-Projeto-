@@ -14,7 +14,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'table', title: 'Table List',  icon:'pe-7s-note2', class: '' },
     { path: 'typography', title: 'Typography',  icon:'pe-7s-news-paper', class: '' },
     { path: 'icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
-    { path: 'maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
+    { path: 'relatorios', title: 'relatorios',  icon:'pe-7s-news-paper', class: '' },
     { path: 'notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },
 ];
 

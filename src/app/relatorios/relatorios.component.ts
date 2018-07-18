@@ -7,11 +7,11 @@ label?: string;
 draggable?: boolean;
 }
 @Component({
-  selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+  selector: 'app-relatorios',
+  templateUrl: './relatorios.component.html',
+  styleUrls: ['./relatorios.component.css']
 })
-export class MapsComponent implements OnInit {
+export class RelatoriosComponent implements OnInit {
 
   constructor() { }
 

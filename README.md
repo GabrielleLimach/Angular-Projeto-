@@ -72,11 +72,11 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   │   ├── lbd-chart.component.html
 │   │   │   │   └── lbd-chart.component.ts
 │   │   │   └── lbd.module.ts
-│   │   ├── maps
-│   │   │   ├── maps.component.css
-│   │   │   ├── maps.component.html
-│   │   │   ├── maps.component.spec.ts
-│   │   │   └── maps.component.ts
+│   │   ├── relatorios
+│   │   │   ├── relatorios.component.css
+│   │   │   ├── relatorios.component.html
+│   │   │   ├── relatorios.component.spec.ts
+│   │   │   └── relatorios.component.ts
 │   │   ├── notifications
 │   │   │   ├── notifications.component.css
 │   │   │   ├── notifications.component.html
