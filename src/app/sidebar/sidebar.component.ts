@@ -12,7 +12,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'material', title: 'Material',  icon:'pe-7s-user', class: '' },
     { path: 'cadastro', title: 'Cadastro', icon: 'pe-7s-upload', class: ''},
     { path: 'table', title: 'Table List',  icon:'pe-7s-note2', class: '' },
-    { path: 'typography', title: 'Typography',  icon:'pe-7s-news-paper', class: '' },
+    { path: 'estoque', title: 'estoque',  icon:'pe-7s-news-paper', class: '' },
     { path: 'icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
     { path: 'relatorios', title: 'relatorios',  icon:'pe-7s-news-paper', class: '' },
     { path: 'notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },

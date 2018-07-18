@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialComponent } from './material/material.component';
 import { TablesComponent } from './tables/tables.component';
-import { TypographyComponent } from './typography/typography.component';
+import { EstoqueComponent } from './estoque/estoque.component';
 import { IconsComponent } from './icons/icons.component';
 import { RelatoriosComponent } from './Relatorios/relatorios.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -29,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     MaterialComponent,
     TablesComponent,
-    TypographyComponent,
+    EstoqueComponent,
     IconsComponent,
     RelatoriosComponent,
     NotificationsComponent

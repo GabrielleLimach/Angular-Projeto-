@@ -100,11 +100,11 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   ├── tables.component.html
 │   │   │   ├── tables.component.spec.ts
 │   │   │   └── tables.component.ts
-│   │   ├── typography
-│   │   │   ├── typography.component.css
-│   │   │   ├── typography.component.html
-│   │   │   ├── typography.component.spec.ts
-│   │   │   └── typography.component.ts
+│   │   ├── estoque
+│   │   │   ├── estoque.component.css
+│   │   │   ├── estoque.component.html
+│   │   │   ├── estoque.component.spec.ts
+│   │   │   └── estoque.component.ts
 │   │   └── user
 │   │       ├── user.component.css
 │   │       ├── user.component.html
