@@ -13,10 +13,10 @@ import { LbdModule } from './lbd/lbd.module';
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
-import { MaterialComponent } from './material/material.component';
+import { MaterialComponent } from './cadastro/material/material.component';
 import { TablesComponent } from './tables/tables.component';
 import { EstoqueComponent } from './estoque/estoque.component';
-import { IconsComponent } from './icons/icons.component';
+import { SolicitacoesComponent } from './cadastro/solicitacoes/solicitacoes.component';
 import { RelatoriosComponent } from './Relatorios/relatorios.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialComponent,
     TablesComponent,
     EstoqueComponent,
-    IconsComponent,
+    SolicitacoesComponent,
     RelatoriosComponent,
     NotificationsComponent
 

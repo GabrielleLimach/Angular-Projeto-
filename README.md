@@ -62,11 +62,11 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   ├── home.component.html
 │   │   │   ├── home.component.spec.ts
 │   │   │   └── home.component.ts
-│   │   ├── icons
-│   │   │   ├── icons.component.css
-│   │   │   ├── icons.component.html
-│   │   │   ├── icons.component.spec.ts
-│   │   │   └── icons.component.ts
+│   │   ├── solicitacoes
+│   │   │   ├── solicitacoes.component.css
+│   │   │   ├── solicitacoes.component.html
+│   │   │   ├── solicitacoes.component.spec.ts
+│   │   │   └── solicitacoes.component.ts
 │   │   ├── lbd
 │   │   │   ├── lbd-chart
 │   │   │   │   ├── lbd-chart.component.html

@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './material.component.html',
   styleUrls: ['./material.component.css']
 })
+
 export class MaterialComponent implements OnInit {
 
   
