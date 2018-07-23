@@ -20,19 +20,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr *ngFor="let m of materiais">
+                                    <th>{{m.idmaterial}}</th>
+                                        <td>{{m.nome}}</td>
+                                        <td>{{m.fkmaterialtipo?.tipo}}</td>
+                                        <td>{{m.quantidade}}</td>
+                                        <td>{{m.tombo}}</td>
+                                        <td>{{m.fksetor?.descricao}}</td>
+                                        <td>{{m.validade}}</td>
+                                        <td>{{m.fkcategoria?.descricao}}</td>
                                     <td class="td-actions text-right">
-                                        <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile">
+                                        <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a class="btn btn-danger btn-simple btn-xs" rel="tooltip" title="" data-original-title="Remove">
+                                        <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" type="button" ddata-toggle="tooltip" data-placement="top" title="Remover" ata-original-title="Remove">
                                             <i class="fa fa-times"></i>
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
