@@ -1,4 +1,4 @@
-import { Material } from 'core/model';
+import { Material, Categoria, Setor, MaterialTipo, Funcionarios, Cargo } from 'core/model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -7,23 +7,26 @@ import { Observable } from 'rxjs';
   })
  
   export class MaterialService {
+     
+     categorias:   Array <Categoria>    = [];
+     setores:      Array <Setor>        = [];
+     materiais:    Array <Material>     = [];
+     tipos:        Array <MaterialTipo> = [];
+     funcionarios: Array <Funcionarios> = [];
+     cargos:       Array <Cargo>        = [];
 
-    
+    //url dos servicos
+    materiaisUrl     =    'http://localhost:8080/materiais';
+    categoriasUrl    =    'http://localhost:8080/categorias';
+    materiaistipoUrl =    'http://localhost:8080/materiaistipo';
+    setorUrl         =    'http://localhost:8080/setor';
+    funcionariosUrl  =    'http://localhost:8080/funcionarios';
+    cargosUrl        =    'http://localhost:8080/cargo';
   
       constructor(
         private http: HttpClient
       ) {}
     
-      // consultar(): Observable<any> {
-      //   return this.http.get(this.materiaisUrl);
-      // }
-      // categorias(): Observable<any> {
-      //   return this.http.get(this.categoriasUrl);
-      // }
-      // tipos(): Observable<any>{
-      //   return this.http.get(this.materiaistipoUrl);
-      // }
-  
   
       Consultas(url): Observable<any>{
         return this.http.get(url);
@@ -36,6 +39,10 @@ import { Observable } from 'rxjs';
   
         return this.http.post<Material>(url, material, {headers: headers});
        }
+
+       carregarMateriais(){
+        this.Consultas(this.materiaisUrl).subscribe(response => this.materiais = response);
+      }
   
        deletar ( id, url): Observable<any>{
         return this.http.delete(url+"/"+id);

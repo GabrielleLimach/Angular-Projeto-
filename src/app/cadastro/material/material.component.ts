@@ -13,10 +13,12 @@ import { NgForm } from '@angular/forms';
 export class MaterialComponent implements OnInit {
 
   
+
   constructor(private materiaisservice : MaterialService) { }
   
   ngOnInit() {
 
    
   }
+
 }
