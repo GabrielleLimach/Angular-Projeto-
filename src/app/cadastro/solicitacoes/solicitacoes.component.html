@@ -10,13 +10,13 @@
                         <div class="content content-full-width">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active" role="presentation">
-                                    <a data-toggle="tab" href="#icon-info" aria-expanded="true" value="1" ><i class="fa fa-info"></i> Formulário</a>
+                                    <a data-toggle="tab" href="#icon-info" aria-expanded="true" value="1"><i class="fa fa-info"></i> Formulário</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="icon-info">
                                     <div class="content">
-                                        <form #f="ngForm" (ngSubmit)="adicionar(f)">
+                                        <form #f="ngForm" (ngSubmit)="adiciona(f)">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -48,7 +48,7 @@
                                                         <input type="text" class="form-control" name="materiais">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label>Tipo</label>
                                                         <select class="form-control" id="564" name="destino">
@@ -62,11 +62,11 @@
                                                         <input type="number" class="form-control" name="quantidade" (ngModel)="materiais.quantidade" >
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Unidade</label>
                                                         <select class="form-control" id="564" name="destino">
-                                                            <option></option>
+                                                            <option *ngFor=" let c of categorias">{{c?.descricao}}</option>
                                                         </select>
                                                     </div>
                                                 </div>
