@@ -3,6 +3,15 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
+                    <form>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
                     <div class="header">
                         <h4 class="title">Materiais Permanentes</h4>
                         <p class="category">estoque de materiais</p>
@@ -12,23 +21,21 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>
-                                    <th>Nome</th>
-                                    <th>Quantidade</th>
-                                    <th>Tombo</th>
-                                    <th>Localização</th>
-                                    <th>Situação</th>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Quantidade</th>
+                                    <th class="text-center">Tombo</th>
+                                    <th class="text-center">Localização</th>
+                                    <th class="text-center">Situação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let m of materiais">
-                                    <th>{{m.idmaterial}}</th>
-                                        <td>{{m.nome}}</td>
-                                        <td>{{m.fkmaterialtipo?.tipo}}</td>
-                                        <td>{{m.quantidade}}</td>
-                                        <td>{{m.tombo}}</td>
-                                        <td>{{m.fksetor?.descricao}}</td>
-                                        <td>{{m.validade}}</td>
-                                        <td>{{m.fkcategoria?.descricao}}</td>
+                                    <th class="text-center">{{m.idmaterial}}</th>
+                                        <td class="text-center">{{m.nome}}</td>
+                                        <td class="text-center">{{m.quantidade}}</td>
+                                        <td class="text-center">{{m.tombo}}</td>
+                                        <td class="text-center">{{m.fksetor?.descricao}}</td>
+                                        <td class="text-center">{{m.fkmaterialstatus?.status}}</td>
                                     <td class="td-actions text-right">
                                         <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
                                             <i class="fa fa-edit"></i>
@@ -56,20 +63,21 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>
-                                    <th>Nome</th>
-                                    <th>Quantidade</th>
-                                    <th>Validade</th>
-                                    <th>Localização</th>
-                                    <th>Situação</th>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Quantidade</th>
+                                    <th class="text-center">Validade</th>
+                                    <th class="text-center">Localização</th>
+                                    <th class="text-center">Situação</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr *ngFor="let m of materiais">
+                                    <th class="text-center">{{m.idmaterial}}</th>
+                                        <td class="text-center">{{m.nome}}</td>
+                                        <td class="text-center">{{m.quantidade}}</td>
+                                        <td class="text-center">{{m.validade}}</td>
+                                        <td class="text-center">{{m.fksetor?.descricao}}</td>
+                                        <td class="text-center">{{m.fkmaterialstatus?.status}}</td>
                                     <td class="td-actions text-right">
                                         <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile">
                                             <i class="fa fa-edit"></i>
@@ -82,15 +90,17 @@
                             </tbody>
                         </table>
                     </div>
-                    <ul class="pagination pagination-no-border">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="active"><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
+                    <div class="text-center">
+                        <ul class="pagination pagination-no-border pagination-red text-left">
+                            <li><a href="#">«</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

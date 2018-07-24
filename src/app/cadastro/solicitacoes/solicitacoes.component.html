@@ -52,7 +52,7 @@
                                                     <div class="form-group">
                                                         <label>Tipo</label>
                                                         <select class="form-control" id="564" name="destino">
-                                                            <option></option>
+                                                            <option *ngFor ="let t of tipo">{{t?.tipo}}</option>
                                                         </select>
                                                     </div>
                                                 </div>
