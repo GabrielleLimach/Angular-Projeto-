@@ -1,10 +1,10 @@
 export class Material{
     idmaterial: number;
-    nome:String;
-    fksetor: Setor;
+    nome: string;
     quantidade:number;
     tombo:string;
     validade:Date;
+    fksetor: Setor;
     fkcategoria: Categoria;
     fkmaterialtipo: MaterialTipo;
 

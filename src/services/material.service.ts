@@ -1,4 +1,4 @@
-import { Material, Categoria, Setor, MaterialTipo, Funcionarios, Cargo } from 'core/model';
+import { Material, Categoria, Setor, MaterialTipo, Funcionarios, Cargo, Solicitacao } from 'core/model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
      cargos:       Array <Cargo>        = [];
 
     //url dos servicos
+    solicitacaoUrl   =    'http://localhost:8080/solicitacoes';
     materiaisUrl     =    'http://localhost:8080/materiais';
     categoriasUrl    =    'http://localhost:8080/categorias';
     materiaistipoUrl =    'http://localhost:8080/materiaistipo';
@@ -32,7 +33,13 @@ import { Observable } from 'rxjs';
         return this.http.get(url);
       }
   
+      adicionars(solicitacao: Solicitacao, url): Observable<Solicitacao> { 
+        const headers = new HttpHeaders().set( 'Content-Type', 'application/json' );
+        headers.append( 'Content-Type', 'application/json' );
   
+        return this.http.post<Solicitacao>(url, solicitacao, {headers: headers});
+       } 
+
       adicionar(material: Material, url): Observable<Material> { 
         const headers = new HttpHeaders().set( 'Content-Type', 'application/json' );
         headers.append( 'Content-Type', 'application/json' );

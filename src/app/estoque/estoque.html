@@ -29,13 +29,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let m of materiais">
-                                    <th class="text-center">{{m.idmaterial}}</th>
-                                        <td class="text-center">{{m.nome}}</td>
-                                        <td class="text-center">{{m.quantidade}}</td>
-                                        <td class="text-center">{{m.tombo}}</td>
-                                        <td class="text-center">{{m.fksetor?.descricao}}</td>
-                                        <td class="text-center">{{m.fkmaterialstatus?.status}}</td>
+                                <tr *ngFor="let p of permanente">
+                                    <th class="text-center">{{p.idmaterial}}</th>
+                                        <td class="text-center">{{p.nome}}</td>
+                                        <td class="text-center">{{p.quantidade}}</td>
+                                        <td class="text-center">{{p.tombo}}</td>
+                                        <td class="text-center">{{p.fksetor?.descricao}}</td>
+                                        <td class="text-center">{{p.fkmaterialstatus?.status}}</td>
                                     <td class="td-actions text-right">
                                         <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
                                             <i class="fa fa-edit"></i>
@@ -71,7 +71,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let m of materiais">
+                                <tr *ngFor="let m of provisorio">
                                     <th class="text-center">{{m.idmaterial}}</th>
                                         <td class="text-center">{{m.nome}}</td>
                                         <td class="text-center">{{m.quantidade}}</td>

@@ -9,14 +9,24 @@ import { Material } from 'core/model';
 })
 export class EstoqueComponent implements OnInit {
   public materiais: Material[] = []
-  materiaisUrl = 'http://localhost:8080/materiais';
+  
+  permanente;
+  provisorio;
+
+  materiaisUrl         =  'http://localhost:8080/materiais';
+  materiaisPermanentes =  'http://localhost:8080/materiais/tipo/1';
+  materiaisProvisorios =  'http://localhost:8080/materiais/tipo/2';
+
 
   constructor(private materialService: MaterialService) { }
 
   ngOnInit() {
     this.carregarLista();
+    this.carregarPermanentes();
+    this.carregarProvisorios();
   }
 
+  //carrega lista de todos os materiais
   carregarLista() {
       this.materialService.Consultas(this.materiaisUrl).subscribe(
           data => {
@@ -25,5 +35,27 @@ export class EstoqueComponent implements OnInit {
           
       );
   }
+
+
+  //metodo de carregar lista de materiais permanentes
+  carregarPermanentes(){
+    this.materialService.Consultas(this.materiaisPermanentes).subscribe(
+        permanente =>{
+                console.log(this.permanente = <Array<Material>>permanente);
+
+        },
+    );
+  }
+
+
+  //metodo de carregar lista de materiais provisorios
+  carregarProvisorios(){
+    this.materialService.Consultas(this.materiaisProvisorios).subscribe(
+      provisorios => {
+            this.provisorio =  <Array<Material>> provisorios;
+      },
+    );
+  }
+
 
 }

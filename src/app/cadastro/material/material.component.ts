@@ -12,13 +12,55 @@ import { NgForm } from '@angular/forms';
 
 export class MaterialComponent implements OnInit {
 
+  materiais;
+  categorias;
+  tipos; 
+  setor;
   
+  material = new Material();
 
-  constructor(private materiaisservice : MaterialService) { }
+  constructor(private materialservice : MaterialService) { }
   
   ngOnInit() {
 
+    this.materialservice.Consultas(this.materialservice.materiaisUrl)
+    .subscribe(response => {this.materiais = <Array<Material>> response;});
+
+    this.materialservice.Consultas(this.materialservice.materiaistipoUrl)
+    .subscribe(response => {this.tipos = <Array<MaterialTipo>>response;});
+    
+    this.materialservice.Consultas(this.materialservice.categoriasUrl)
+    .subscribe(response => {this.categorias = <Array<Categoria>>response;}); 
+    
+    this.materialservice.Consultas(this.materialservice.setorUrl)
+    .subscribe(response => {this.setor = <Array<Setor>>response;});
    
   }
+
+  adicionarPermanente(f: NgForm){
+
+    this.material.fkmaterialtipo.idmaterialtipo = 1; 
+    this.material.validade = null;
+
+    this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
+      response => {
+        console.log(this.materialservice.carregarMateriais());       
+
+      },
+      error => console.error(error));
+  }
+ 
+  adicionarProvisorio(f: NgForm){
+
+    this.material.fkmaterialtipo.idmaterialtipo = 2; 
+    this.material.tombo = null;
+
+    this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
+      response => {
+        console.log(this.materialservice.carregarMateriais());       
+
+      },
+      error => console.error(error));
+    }
 
 }

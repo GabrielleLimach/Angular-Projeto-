@@ -19,7 +19,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="icon-info">
                                     <div class="content">
-                                        <form #f="ngForm" (ngSubmit)="adicionarPermanente(f)">
+                                        <form #f="ngForm" (ngSubmit)="adicionarPer(f)">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -28,9 +28,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-5">
-                                                        <div class="form-group">
-                                                        </div>
+                                                    <div class="form-group">
                                                     </div>
+                                                </div>
                                                 <div class="col-md-3">
                                                     <label for="unidade">Data</label>
                                                     <input class="form-control" id="unidade" name="unidade">
@@ -39,8 +39,8 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <label for="564">Destino</label>
-                                                    <select class="form-control" id="564" name="destino" disabled >
-                                                        <option disabled></option>
+                                                    <select class="form-control" id="564" name="destino" [(ngModel)]="material.fksetor.idsetor" name="fksetor">
+                                                            <option *ngFor="let s of setor" value={{s?.idsetor}}>{{s?.descricao}}</option>
                                                     </select>
                                                 </div>
                                             </div>    
@@ -65,56 +65,62 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div   ></div>
                                             </div> 
                                             <button type="submit" class="btn btn-danger btn-fill pull-right"  name="fktipo">Adicionar</button>
                                             <div class="clearfix"></div>          
                                         </form>
-                                    </div>   
-                                    
+                                    </div>     
                                 </div>
                                 <div class="tab-pane" id="icon-account">
                                     <div class="content">
-                                        <form #f="ngForm"  >
-                                                <div class="row">
-                                                    <div class="col-md-4">
+                                        <form #f="ngForm" (ngSubmit)="adicionarPro(f)">
+                                            <div class="row">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <label>Material</label>
-                                                        <input type="text" class="form-control" name="nome" value="{{material.nome}}" [(ngModel)] = "material.nome" >
+                                                        <label>Usuário</label>
+                                                        <input type="text" disabled class="form-control" name="usuario" >
                                                     </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group"></div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Validade</label>
-                                                        <input type="text" class="form-control" placeholder="" nome="validade" >
+                                                        <label>Data</label>
+                                                        <input type="text" class="form-control" placeholder="" nome="data">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <label for="exampleFormControlSelect1">Unidade</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="material.fkcategoria" name="fkcategoria">
-                                                        <option *ngFor="let c of categorias" value={{c?.idcategoria}}>{{c?.descricao}}</option>
+                                            </div>    
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label for="exampleFormControlSelect1">Destino</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="material.fksetor.idsetor" name="fksetor">
+                                                        <option *ngFor="let s of setor" value={{s?.idsetor}}>{{s?.descricao}}</option>
                                                     </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Material</label>
+                                                    <input type="text" class="form-control" placeholder="" name="material" [(ngModel)] = "material.nome" >
                                                 </div>
                                                 <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label>Quantidade</label>
-                                                        <input type="text" class="form-control" name="quantidade">
+                                                        <input type="number" class="form-control" name="quantidade" [(ngModel)]="material.quantidade" >
                                                     </div>
                                                 </div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <label for="exampleFormControlSelect1">Localização</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1" name="destino">
-                                                        <option></option>
+                                                <div class="col-md-4">
+                                                    <label for="exampleFormControlSelect1">Unidade</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="material.fkcategoria.idcategoria" name="fkcategoria">
+                                                        <option *ngFor="let c of categorias" value={{c?.idcategoria}}>{{c?.descricao}}</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <button type="submit" class="btn btn-info btn-fill pull-right">Adicionar</button>
+                                            <div class="clearfix"></div>
                                         </form>
-                                    </div> 
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Cadastrar Informações</button>
-                                    <div class="clearfix"></div>
+                                    </div>
                                 </div>
                                 <div class="content table-responsive table-full-width">
                                     <table class="table">

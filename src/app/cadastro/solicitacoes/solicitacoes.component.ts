@@ -1,7 +1,8 @@
-import { MaterialService } from 'services/material.service';
-import { Categoria, MaterialTipo, Material } from 'core/model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { SolicitacoesService } from 'services/solicitacoes.services';
+import { MaterialService } from 'services/material.service';
+import { Categoria, MaterialTipo, Material, Setor, Solicitacao } from 'core/model';
 
 @Component({
   selector: 'app-solicitacoes',
@@ -13,10 +14,12 @@ export class SolicitacoesComponent implements OnInit {
   materiais;
   categorias;
   tipos; 
+  setor;
   
   material = new Material();
+  solicitacao = new Solicitacao();
 
-  constructor(private materialservice: MaterialService) { }
+  constructor(private materialservice: MaterialService, private solicitacaoservice: SolicitacoesService ) { }
 
   ngOnInit() {
 
@@ -27,22 +30,37 @@ export class SolicitacoesComponent implements OnInit {
     .subscribe(response => {this.tipos = <Array<MaterialTipo>>response;});
     
     this.materialservice.Consultas(this.materialservice.categoriasUrl)
-    .subscribe(response => {this.categorias = <Array<Categoria>>response;});   
+    .subscribe(response => {this.categorias = <Array<Categoria>>response;}); 
+    
+    this.materialservice.Consultas(this.materialservice.setorUrl)
+    .subscribe(response => {this.setor = <Array<Setor>>response;});
 
   }
 
-  adicionarPermanente(f: NgForm){
+  adicionarPer(f: NgForm){
 
-    //console.log(document.getElementsByName("aba").item(1).nodeValue);
-    this.material.fkmaterialtipo.idmaterialtipo = 1; 
+    this.solicitacao.fksolicitacaostatus =  null; 
 
-    this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
+
+    this.materialservice.adicionars(this.solicitacao,this.materialservice.solicitacaoUrl).subscribe(
       response => {
-        console.log(this.materialservice.carregarMateriais());       
+        this.materialservice.carregarMateriais();       
+
+      },
+      error => console.error(error));
+  }
+ 
+  
+  adicionarPro(f: NgForm){
+
+    this.solicitacao.fksolicitacaostatus =  null; 
+
+    this.materialservice.adicionars(this.solicitacao,this.materialservice.solicitacaoUrl).subscribe(
+      response => {
+        this.materialservice.carregarMateriais();       
 
       },
       error => console.error(error));
     }
- 
 }
 
