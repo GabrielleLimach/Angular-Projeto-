@@ -28,12 +28,13 @@ export class SolicitacoesComponent implements OnInit {
     
     this.materialservice.Consultas(this.materialservice.categoriasUrl)
     .subscribe(response => {this.categorias = <Array<Categoria>>response;});   
+
   }
 
-  adicionar(f: NgForm){
+  adicionarPermanente(f: NgForm){
 
-    console.log("Funcionou");
-
+    //console.log(document.getElementsByName("aba").item(1).nodeValue);
+    this.material.fkmaterialtipo.idmaterialtipo = 1; 
 
     this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
       response => {

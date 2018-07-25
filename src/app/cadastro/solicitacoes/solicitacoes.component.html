@@ -9,8 +9,8 @@
                         </div>
                         <div class="content content-full-width">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active" role="presentation">
-                                    <a data-toggle="tab" href="#icon-info" aria-expanded="true" value="1" ><i class="fa fa-info"></i> Permanente</a>
+                                <li class="active" role="presentation" name="aba">
+                                    <a data-toggle="tab" href="#icon-info" aria-expanded="true" value="1"><i class="fa fa-info"></i> Permanente</a>
                                 </li>
                                 <li class="">
                                     <a data-toggle="tab" href="#icon-account" aria-expanded="false" value="2"><i class="fa fa-user"></i> Provisório</a>
@@ -19,7 +19,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="icon-info">
                                     <div class="content">
-                                        <form #f="ngForm" (ngSubmit)="adicionar(f)">
+                                        <form #f="ngForm" (ngSubmit)="adicionarPermanente(f)">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -65,8 +65,9 @@
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <div   ></div>
                                             </div> 
-                                            <button type="submit" class="btn btn-danger btn-fill pull-right">Adicionar</button>
+                                            <button type="submit" class="btn btn-danger btn-fill pull-right"  name="fktipo">Adicionar</button>
                                             <div class="clearfix"></div>          
                                         </form>
                                     </div>   
