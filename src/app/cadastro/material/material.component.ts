@@ -41,6 +41,7 @@ export class MaterialComponent implements OnInit {
 
     this.material.fkmaterialtipo.idmaterialtipo = 1; 
     this.material.validade = null;
+    this.material.fkmaterialstatus.idmaterialstatus = 1;
 
     this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
       response => {
@@ -54,6 +55,7 @@ export class MaterialComponent implements OnInit {
 
     this.material.fkmaterialtipo.idmaterialtipo = 2; 
     this.material.tombo = null;
+    this.material.fkmaterialstatus.idmaterialstatus = 1;
 
     this.materialservice.adicionar(this.material,this.materialservice.materiaisUrl).subscribe(
       response => {

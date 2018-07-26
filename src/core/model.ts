@@ -7,11 +7,13 @@ export class Material{
     fksetor: Setor;
     fkcategoria: Categoria;
     fkmaterialtipo: MaterialTipo;
+    fkmaterialstatus: MaterialStatus
 
     constructor(){
         this.fksetor = new Setor();
         this.fkmaterialtipo = new MaterialTipo();
-        this.fkcategoria= new Categoria();
+        this.fkcategoria = new Categoria();
+        this.fkmaterialstatus = new MaterialStatus();
     }
 }
 
@@ -67,7 +69,7 @@ export class Historico{
 
 export class Solicitacao{
     idsolicitacao:number;
-    datasolicitacao:Date;
+    data:Date;
     justificativa:string;
     fkfuncinario: Funcionarios;
     fksolicitacaostatus: SolicitacaoStatus;
