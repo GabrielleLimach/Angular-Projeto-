@@ -3,51 +3,65 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <form>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title">Materiais Permanentes</h4>
-                        <p class="category">estoque de materiais</p>
-                    </div>
-                    <div class="content table-full-width">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th class="text-center">Nome</th>
-                                    <th class="text-center">Quantidade</th>
-                                    <th class="text-center">Tombo</th>
-                                    <th class="text-center">Localização</th>
-                                    <th class="text-center">Situação</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let p of permanente">
-                                    <th class="text-center">{{p.idmaterial}}</th>
-                                        <td class="text-center">{{p.nome}}</td>
-                                        <td class="text-center">{{p.quantidade}}</td>
-                                        <td class="text-center">{{p.tombo}}</td>
-                                        <td class="text-center">{{p.fksetor?.descricao}}</td>
-                                        <td class="text-center">{{p.fkmaterialstatus?.status}}</td>
-                                    <td class="td-actions text-right">
-                                        <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" type="button" ddata-toggle="tooltip" data-placement="top" title="Remover" ata-original-title="Remove">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div class="content">
+                        <div class="header">
+                            <h4 class="title">Materiais Permanentes</h4>
+                        </div>
+                        <div class="row"><div class="col-sm-6"><div class="dataTables_length" id="datatables_length"><label>Mostrar <select name="datatables_length" aria-controls="datatables" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="-1">All</option></select></label></div></div><div class="col-sm-6"><div id="datatables_filter" class="dataTables_filter"><label><input type="pesquisa" class="form-control input-sm" placeholder="Pesquisar" aria-controls="datatables"></label></div></div></div>
+                        <div class="content table-full-width">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">#</th>
+                                        <th class="text-center">Nome
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-sort"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center">Quantidade
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-sort"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center">Tombo
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-sort"></i>
+                                            </a>    
+                                        </th>
+                                        <th class="text-center">Localização
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-sort"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center">Situação
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-sort"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let p of permanente">
+                                        <th class="text-center">{{p.idmaterial}}</th>
+                                            <td class="text-center">{{p.nome}}</td>
+                                            <td class="text-center">{{p.quantidade}}</td>
+                                            <td class="text-center">{{p.tombo}}</td>
+                                            <td class="text-center">{{p.fksetor?.descricao}}</td>
+                                            <td class="text-center">{{p.fkmaterialstatus?.status}}</td>
+                                        <td class="td-actions text-right">
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                            <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" type="button" ddata-toggle="tooltip" data-placement="top" title="Remover" ata-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>

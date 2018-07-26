@@ -3,6 +3,7 @@ import { MaterialService } from 'services/material.service';
 import { Categoria, Material, MaterialTipo } from 'core/model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { forkJoin } from '../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-material',
@@ -22,7 +23,7 @@ export class MaterialComponent implements OnInit {
   constructor(private materialservice : MaterialService) { }
   
   ngOnInit() {
-
+    
     this.materialservice.Consultas(this.materialservice.materiaisUrl)
     .subscribe(response => {this.materiais = <Array<Material>> response;});
 
