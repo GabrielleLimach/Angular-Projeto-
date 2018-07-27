@@ -95,11 +95,11 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   ├── sidebar.component.html
 │   │   │   ├── sidebar.component.ts
 │   │   │   └── sidebar.module.ts
-│   │   ├── tables
-│   │   │   ├── tables.component.css
-│   │   │   ├── tables.component.html
-│   │   │   ├── tables.component.spec.ts
-│   │   │   └── tables.component.ts
+│   │   ├── users
+│   │   │   ├── users.component.css
+│   │   │   ├── users.component.html
+│   │   │   ├── users.component.spec.ts
+│   │   │   └── users.component.ts
 │   │   ├── estoque
 │   │   │   ├── estoque.component.css
 │   │   │   ├── estoque.component.html

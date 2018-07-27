@@ -13,7 +13,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'solicitacoes', title: 'Solicitacoes',  icon:'pe-7s-note', class: '' },
     { path: 'estoque', title: 'Estoque',  icon:'pe-7s-news-paper', class: '' },
     { path: 'material', title: 'Material',  icon:'pe-7s-user', class: '' },
-    { path: 'table', title: 'Table List',  icon:'pe-7s-note2', class: '' },
+    { path: 'users', title: 'Usários',  icon:'pe-7s-users', class: '' },
     { path: 'relatorios', title: 'relatorios',  icon:'pe-7s-news-paper', class: '' },
 ];
 

@@ -1,4 +1,4 @@
-import { Funcionarios, Cargo } from './../core/model';
+import { Funcionarios, Cargo } from 'core/model';
 import { MaterialService } from './material.service';
 import { Categoria, Setor, Material, MaterialTipo } from 'core/model';
 import { Injectable } from '@angular/core';

@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 import { MaterialComponent } from './cadastro/material/material.component';
-import { TablesComponent } from './tables/tables.component';
+import { UsersComponent } from './users/users.component';
 import { EstoqueComponent } from './estoque/estoque.component';
 import { SolicitacoesComponent } from './cadastro/solicitacoes/solicitacoes.component';
 import { RelatoriosComponent } from './Relatorios/relatorios.component';
@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomeComponent,
     MaterialComponent,
-    TablesComponent,
+    UsersComponent,
     EstoqueComponent,
     SolicitacoesComponent,
     RelatoriosComponent,
