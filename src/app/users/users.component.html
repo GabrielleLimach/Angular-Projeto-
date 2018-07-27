@@ -4,16 +4,15 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Edit Profile</h4>
+                        <h4 class="title">Cadastro de Usuário</h4>
                     </div>
                     <div class="content">
-                        <form novalidate="" class="ng-untouched ng-pristine ng-valid">
-
+                        <form novalidate="" class="ng-untouched ng-pristine ng-valid" #f="ngForm" (ngSubmit)="adicionarFunc(f)">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input class="form-control" type="text">
+                                    <div class="form-group" >
+                                        <label>Nome</label>
+                                        <input class="form-control" type="text" name="funcionario" [(ngModel)]="funcionario.nome">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -25,59 +24,39 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Setor</label>
-                                        <input class="form-control" placeholder="Company" type="text">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input class="form-control" placeholder="Email" type="email" name="email" [(ngModel)]="funcionario.login">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Username</label>
-                                        <input class="form-control" type="text" >
+                                        <label>Senha</label>
+                                        <input class="form-control" type="text" name="senha" [(ngModel)]="funcionario.senha">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input class="form-control" placeholder="Email" type="email">
+                                        <label>Função</label>
+                                        <select class="form-control" id="564" [(ngModel)]="funcionario.fkcargo.idcargo" name="fkcargo">
+                                            <option *ngFor="let c of cargo" value="{{c?.idcargo}}">{{c?.descricao}}</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-
-                            
 
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Address</label>
-                                        <input class="form-control" placeholder="Home Address" type="text">
+                                        <label>Setor</label>
+                                        <select class="form-control" id="564" [(ngModel)]="funcionario.fksetor.idsetor" name="fksetor">
+                                            <option *ngFor="let s of setor" value="{{s?.idsetor}}">{{s?.descricao}}</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>City</label>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Country</label>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Postal Code</label>
-                                        <input class="form-control" type="number">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-info btn-fill pull-right" type="submit">Cadastrar Usuário</button>
+                             <button class="btn btn-info btn-fill pull-right" type="submit">Cadastrar Usuário</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -89,20 +68,20 @@
                         <img alt="..." src="./assets/img/full-screen-image-3.jpg">
                     </div>
                     <div class="content">
-                        <div class="author">
-                             <a href="#">
-                            <img alt="..." class="avatar border-gray" src="./assets/img/default-avatar.png">
-
-                              <h4 class="title">Tania Andrew<br>
-                                 <small>michael24</small>
-                              </h4>
-                            </a>
+                            <div class="author">
+                                <a href="#">
+                                    <img  alt="..." class="avatar border-gray" src="./assets/img/default-avatar.png">
+    
+                                    <h4 class="title">Mike Andrew<br >
+                                        <small >michael24</small>
+                                    </h4>
+                                </a>
+                            </div>
+                            <p class="description text-center"> CDES <br >
+                                 EStágiário <br >
+                                Central de Desenvolvimento de Sistemas
+                            </p>
                         </div>
-                        <p class="description text-center"> "Lamborghini Mercy <br>
-                                            Your chick she so thirsty <br>
-                                            I'm in that two seat Lambo"
-                        </p>
-                    </div>
                     <hr>
                     <div class="text-center">
                         <button class="btn btn-simple" href="#"><i class="fa fa-facebook-square"></i></button>
@@ -113,59 +92,47 @@
                 </div>
             </div>
             <div class="col-md-12">
-                    <div class="card">
-                        <div class="header text-center">
-                            <h4 class="title">Tabela de Usuários</h4>
-                            <p class="category">A table for content management</p>
-                            <br>
-                        </div>
-                        <div class="content table-responsive table-full-width">
-                            <table class="table table-bigboy">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">#</th>
-                                            <th>Blog Title</th>
-                                            <th class="th-description">Description</th>
-                                            <th class="text-right">Date</th>
-                                            <th class="text-right">Views</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                  <tbody>
-                                      <tr>
-                                          <td>
-                                              <div class="img-container">
-                                                  <img alt="..." src="./assets/img/blog-1.jpg">
-                                              </div>
-                                          </td>
-                                          <td class="td-name">
-                                              10 Things that all designers do
-                                          </td>
-                                          <td>Most beautiful agenda for the office, really nice paper and black cover. Most beautiful agenda for the office.</td>
-                                          <td class="td-number">
-                                              30/08/2016
-                                          </td>
-                                          <td class="td-number">
-                                              1,225
-                                          </td>
-                                          <td class="td-actions">
-                                              <button class="btn btn-info btn-simple btn-icon" data-placement="left" rel="tooltip" title="" type="button" data-original-title="View Post">
-                                                  <i class="fa fa-image"></i>
-                                              </button>
-                                              <button class="btn btn-success btn-simple btn-icon" data-placement="left" rel="tooltip" title="" type="button" data-original-title="Edit Post">
-                                                  <i class="fa fa-edit"></i>
-                                              </button>
-                                              <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" title="" type="button" data-original-title="Remove Post">
-                                                  <i class="fa fa-times"></i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                            </table>
-                        </div>
+                <div class="card">
+                    <div class="header text-center">
+                        <h4 class="title">Tabela de Usuários</h4>
+                        <p class="category">A table for content management</p>
+                        <br>
+                    </div>
+                    <div class="content table-responsive">
+                        <table class="table table-bigboy">
+                            <thead>
+                                <tr>
+                                    <th class="">#</th>
+                                    <th>Usuário</th>
+                                    <th class="th-description">Setor</th>
+                                    <th class="text-right">Funcão</th>
+                                    <th class="">Email</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor ="let f of funcionario">
+                                    <td class="td-number">{{f.idfuncionario}}</td>
+                                    <td class="td-name">{{f.nome}}</td>
+                                    <td class="td-description">{{f.fksetor.descricao}}</td>
+                                    <td class="td-number">{{f.fkcargo.descricao}}</td>
+                                    <td class="td-actions">
+                                        <button class="btn btn-info btn-simple btn-icon" data-placement="left" rel="tooltip" title="" type="button" data-original-title="View Post">
+                                            <i class="fa fa-image"></i>
+                                        </button>
+                                        <button class="btn btn-success btn-simple btn-icon" data-placement="left" rel="tooltip" title="" type="button" data-original-title="Edit Post">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" title="" type="button" data-original-title="Remove Post">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
+            </div>
         </div>
     </div>
 </div>
