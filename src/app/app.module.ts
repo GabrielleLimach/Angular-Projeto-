@@ -20,7 +20,8 @@ import { SolicitacoesComponent } from './cadastro/solicitacoes/solicitacoes.comp
 import { RelatoriosComponent } from './Relatorios/relatorios.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AlertModule } from 'ngx-alerts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     AppRoutingModule,
     LbdModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AlertModule.forRoot({maxMessages: 5, timeout: 5000})
   ],
   providers: [],
   bootstrap: [AppComponent]

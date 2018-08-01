@@ -58,6 +58,7 @@
                             </div>
                              <button class="btn btn-info btn-fill pull-right" type="submit">Cadastrar Usuário</button>
                             <div class="clearfix"></div>
+                            <ngx-alerts></ngx-alerts>
                         </form>
                     </div>
                 </div>
@@ -111,7 +112,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor ="let f of funcionario">
+                                <tr *ngFor ="let f of funcionarios">
                                     <td class="td-number">{{f.idfuncionario}}</td>
                                     <td class="td-name">{{f.nome}}</td>
                                     <td class="td-description">{{f.fksetor.descricao}}</td>

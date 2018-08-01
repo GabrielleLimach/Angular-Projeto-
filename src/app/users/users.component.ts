@@ -3,6 +3,7 @@ import { FuncionariosService } from 'services/funcionarios.service';
 import { NgForm } from '../../../node_modules/@angular/forms';
 import { Funcionarios, Cargo, Setor } from 'core/model';
 import { MaterialService } from 'services/material.service';
+import { AlertService } from '../../../node_modules/ngx-alerts';
 
 
 @Component({
@@ -17,7 +18,11 @@ export class UsersComponent implements OnInit {
   setor;
   funcionario = new Funcionarios();
 
-  constructor(private funcionariosservice: FuncionariosService, private materialservice: MaterialService) { }
+  constructor(
+    private funcionariosservice: FuncionariosService, 
+    private materialservice: MaterialService,
+    private alertsService: AlertService,
+  ) { }
 
   ngOnInit() {
 
@@ -35,10 +40,14 @@ export class UsersComponent implements OnInit {
 
     this.funcionariosservice.adcionarFuncionario(this.funcionario,this.funcionariosservice.funcionariosUrl).subscribe(
       response => {
-        this.materialservice.carregarMateriais();       
+        this.materialservice.carregarMateriais();  
+        this.alertsService.success('Cadastro efetuado com Sucesso');     
 
       },
       error => console.error(error));
+      this.alertsService.danger('Erro ao cadastrar');
+      ;
+      
   }
  
   
