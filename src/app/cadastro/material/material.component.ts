@@ -75,6 +75,6 @@ export class MaterialComponent implements OnInit {
       error => console.error(error));
      // this.alertService.danger('Erro ao cadastrar material');
     }
-
+    
     
 }
