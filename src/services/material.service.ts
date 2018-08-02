@@ -51,11 +51,11 @@ import { Observable } from 'rxjs';
         this.Consultas(this.materiaisUrl).subscribe(response => this.materiais = response);
       }
   
-       deletar ( id, url): Observable<any>{
+       deletar (id, url): Observable<any>{
         return this.http.delete(url+"/"+id);
        }
   
-       altera( id, url): Observable<any>{
+       altera (id, url): Observable<any>{
         const headers = new HttpHeaders().set( 'Content-Type', 'application/json' );
         return this.http.post<Material>(id, url, {headers: headers});
        }

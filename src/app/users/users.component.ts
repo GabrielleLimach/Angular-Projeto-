@@ -41,12 +41,12 @@ export class UsersComponent implements OnInit {
     this.funcionariosservice.adcionarFuncionario(this.funcionario,this.funcionariosservice.funcionariosUrl).subscribe(
       response => {
         this.materialservice.carregarMateriais();  
-        this.alertsService.success('Cadastro efetuado com Sucesso');     
-
+        this.alertsService.success('Cadastro efetuado com Sucesso');   
+        f.onReset();
+        
       },
       error => console.error(error));
-      this.alertsService.danger('Erro ao cadastrar');
-      ;
+      
       
   }
  

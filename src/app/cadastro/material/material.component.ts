@@ -2,7 +2,7 @@ import { Setor } from 'core/model';
 import { MaterialService } from 'services/material.service';
 import { Categoria, Material, MaterialTipo } from 'core/model';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule, FormGroup } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { AlertService } from '../../../../node_modules/ngx-alerts';
 
@@ -52,9 +52,11 @@ export class MaterialComponent implements OnInit {
       response => {
         console.log(this.materialservice.carregarMateriais());       
         this.alertService.success('Material cadastrado com sucesso');
+        f.onReset();
+                
       },
       error => console.error(error));
-      this.alertService.danger('Erro ao cadastrar material');
+      //this.alertService.danger('Erro ao cadastrar material'); 
   }
  
   adicionarProvisorio(f: NgForm){
@@ -67,10 +69,12 @@ export class MaterialComponent implements OnInit {
       response => {
         console.log(this.materialservice.carregarMateriais());
         this.alertService.success('Material cadastrado com sucesso');
+        f.onReset();
         
       },
       error => console.error(error));
-      this.alertService.danger('Erro ao cadastrar material');
+     // this.alertService.danger('Erro ao cadastrar material');
     }
 
+    
 }
