@@ -22,6 +22,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-alerts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule } from 'ngx-modal';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LbdModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ModalModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 5000})
   ],
   providers: [],

@@ -32,6 +32,7 @@
     "jquery": "^3.2.1",
     "ngx-alerts": "^3.0.0",
     "ngx-animate": "^1.0.1",
+    "ngx-modal": "0.0.29",
     "node-injectable": "^2.1.0",
     "npm-src": "^0.4.0",
     "rxjs": "^6.2.2",
