@@ -2,6 +2,7 @@ import { MaterialTipo } from './../../core/model';
 import { Component, OnInit } from '@angular/core';
 import { MaterialService } from 'services/material.service';
 import { Material } from 'core/model';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-estoque',
@@ -19,7 +20,10 @@ export class EstoqueComponent implements OnInit {
   materiaisProvisorios =  'http://localhost:8080/materiais/tipo/2';
 
 
-  constructor(private materialService: MaterialService) { }
+  constructor(
+    private materialService: MaterialService,
+    private alertService: AlertService,
+  ) { }
 
   ngOnInit() {
     this.carregarLista();
@@ -53,17 +57,20 @@ export class EstoqueComponent implements OnInit {
   carregarProvisorios(){
     this.materialService.Consultas(this.materiaisProvisorios).subscribe(
       provisorios => {
-            this.provisorio = <Array<Material>> provisorios;
+            this.provisorio = <Array<MaterialTipo>> provisorios;
       },
     );
   }
   apagar(id){
     this.materialService.deletar(id,this.materiaisUrl).subscribe(response => {
        //remover o item da lista
-       this.carregarPermanentes();
+       this.ngOnInit();
 
       } );
   }
 
-
+  alert(){
+    this.alertService.info('Deseja alterar este material');
+  }
+  
 }

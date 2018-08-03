@@ -2,9 +2,10 @@ import { Setor } from 'core/model';
 import { MaterialService } from 'services/material.service';
 import { Categoria, Material, MaterialTipo } from 'core/model';
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormsModule, FormGroup } from '@angular/forms';
-import { forkJoin } from 'rxjs';
-import { AlertService } from '../../../../node_modules/ngx-alerts';
+import { NgForm} from '@angular/forms';
+import { AlertService } from 'ngx-alerts';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-material',
@@ -29,7 +30,7 @@ export class MaterialComponent implements OnInit {
   ngOnInit() {
     
     this.materialservice.Consultas(this.materialservice.materiaisUrl)
-    .subscribe(response => {this.materiais = <Array<Material>> response;});
+    .subscribe(response => {this.materiais = <Array<Material>>response;});
 
     this.materialservice.Consultas(this.materialservice.materiaistipoUrl)
     .subscribe(response => {this.tipos = <Array<MaterialTipo>>response;});
@@ -42,7 +43,7 @@ export class MaterialComponent implements OnInit {
    
   }
 
-  adicionarPermanente(f: NgForm){
+  adicionarPermanente(per: NgForm){
 
     this.material.fkmaterialtipo.idmaterialtipo = 1; 
     this.material.validade = null;
@@ -52,14 +53,14 @@ export class MaterialComponent implements OnInit {
       response => {
         console.log(this.materialservice.carregarMateriais());       
         this.alertService.success('Material cadastrado com sucesso');
-        f.onReset();
-                
+        per.onReset();       
       },
+
       error => console.error(error));
       //this.alertService.danger('Erro ao cadastrar material'); 
   }
  
-  adicionarProvisorio(f: NgForm){
+  adicionarProvisorio(pro: NgForm){
 
     this.material.fkmaterialtipo.idmaterialtipo = 2; 
     this.material.tombo = null;
@@ -69,11 +70,11 @@ export class MaterialComponent implements OnInit {
       response => {
         console.log(this.materialservice.carregarMateriais());
         this.alertService.success('Material cadastrado com sucesso');
-        f.onReset();
+        pro.onReset();
         
       },
       error => console.error(error));
-     // this.alertService.danger('Erro ao cadastrar material');
+      //this.alertService.danger('Erro ao cadastrar material');
     }
     
     

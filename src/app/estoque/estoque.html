@@ -50,7 +50,7 @@
                                             <td class="text-center">{{p.fksetor?.descricao}}</td>
                                             <td class="text-center">{{p.fkmaterialstatus?.status}}</td>
                                         <td class="td-actions text-right">
-                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar">
+                                            <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile"  ddata-toggle="tooltip" data-placement="top" title="Editar" (click)="alert()">
                                                 <i class="fa fa-edit"></i>
                                             </a>
                                             <button class="btn btn-danger btn-simple btn-icon " data-placement="left" rel="tooltip" type="button" ddata-toggle="tooltip" data-placement="top" title="Remover" ata-original-title="Remove" (click)="apagar(p.idmaterial)">
@@ -60,6 +60,17 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="text-center">
+                            <ul class="pagination pagination-no-border pagination-red text-left">
+                                <li><a href="#">«</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li class="active"><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul>
                         </div>
                     </div>  
                 </div>
@@ -82,6 +93,7 @@
                                     <th class="text-center">Validade</th>
                                     <th class="text-center">Localização</th>
                                     <th class="text-center">Situação</th>
+                                    <th class="text-center">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -92,11 +104,11 @@
                                         <td class="text-center">{{m.validade}}</td>
                                         <td class="text-center">{{m.fksetor?.descricao}}</td>
                                         <td class="text-center">{{m.fkmaterialstatus?.status}}</td>
-                                    <td class="td-actions text-right">
-                                        <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile">
+                                    <td class="td-actions text-center">
+                                        <a class="btn btn-success btn-simple btn-xs" rel="tooltip" title="" data-original-title="Edit Profile" (click)="alert()">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a class="btn btn-danger btn-simple btn-xs" rel="tooltip" title="" data-original-title="Remove">
+                                        <a class="btn btn-danger btn-simple btn-xs" rel="tooltip" title="" data-original-title="Remove" (click)="apagar(m.idmaterial)">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </td>
