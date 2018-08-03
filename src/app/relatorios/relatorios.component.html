@@ -1,1 +1,269 @@
-    
+<div class=" main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description-logo">
+                        <div class="nav-container">
+                            <ul class="nav nav-icons" role="tablist">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#description-logo" role="tab" aria-expanded="true">
+                                        <i class="fa fa-info-circle"></i><br>
+                                        Diário
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#map-logo" role="tab" aria-expanded="false">
+                                        <i class="fa fa-map-marker"></i><br>
+                                        Mensal
+                                    </a>
+                                    </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#legal-logo" role="tab">
+                                        <i class="fa fa-legal"></i><br>
+                                        Anual
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Description about product</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="map-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Location of product</h4>
+                                <p class="category">Here is some text</p>
+                            </div>
+                            <div class="content">
+                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="legal-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Legal items</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <h3>Relatórios</h3>
+                <div class="nav-container">
+                    <ul class="nav nav-icons" role="tablist">
+                        <li class="active">
+                            <a data-toggle="tab" role="tab" aria-expanded="true">
+                                <i class="fa fa-calendar"></i><br>
+                                Description
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" (click)="randomizeType()" role="tab" aria-expanded="false">
+                                <i class="fa fa-calendar-o"></i><br>
+                                Location
+                            </a>
+                            </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#legal-logo" role="tab">
+                                <i class="fa fa-legal"></i><br>
+                                Legal Info
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <canvas baseChart
+                        [data]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [chartType]="lineChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>    
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="nav-container">
+                    <ul class="nav nav-icons" role="tablist">
+                        <li class="active">
+                            <a data-toggle="tab" role="tab" aria-expanded="true">
+                                <i class="fa fa-info-circle"></i><br>
+                                Description
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#map-logo" role="tab" aria-expanded="false">
+                                <i class="fa fa-map-marker"></i><br>
+                                Location
+                            </a>
+                            </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#legal-logo" role="tab">
+                                <i class="fa fa-legal"></i><br>
+                                Legal Info
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Description about product</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="map-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Location of product</h4>
+                                <p class="category">Here is some text</p>
+                            </div>
+                            <div class="content">
+                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="legal-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Legal items</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="nav-container">
+                    <ul class="nav nav-icons" role="tablist">
+                        <li class="active">
+                            <a data-toggle="tab" href="#description-logo" role="tab" aria-expanded="true">
+                                <i class="fa fa-info-circle"></i><br>
+                                Description
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#map-logo" role="tab" aria-expanded="false">
+                                <i class="fa fa-map-marker"></i><br>
+                                Location
+                            </a>
+                            </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#legal-logo" role="tab">
+                                <i class="fa fa-legal"></i><br>
+                                Legal Info
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Description about product</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="map-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Location of product</h4>
+                                <p class="category">Here is some text</p>
+                            </div>
+                            <div class="content">
+                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="legal-logo">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Legal items</h4>
+                                <p class="category">More information here</p>
+                            </div>
+                            <div class="content">
+                                <p>The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
+                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div style="display: block">
+                    <div class="card">
+                        <canvas baseChart
+                            [data]="polarAreaChartData"
+                            [labels]="polarAreaChartLabels"
+                            [legend]="polarAreaLegend"
+                            [chartType]="polarAreaChartType"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)">
+                        </canvas>
+                    </div>    
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+        
+  
+  <div class="col-md-12 text-center" style="margin-top: 10px;height: 50%">
+    <button (click)="randomizeType()" style="display: inline-block">Toggle</button>
+  </div>
+
+ 

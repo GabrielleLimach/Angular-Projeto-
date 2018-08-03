@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-alerts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-modal';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ModalModule } from 'ngx-modal';
     HttpClientModule,
     BrowserAnimationsModule,
     ModalModule,
+    ChartsModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 5000})
   ],
   providers: [],
