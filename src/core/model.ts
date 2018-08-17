@@ -96,3 +96,61 @@ export class SolicitacaoItem{
 
     }
 }
+
+export class PorTipo{
+    id: number;
+    material: Material;
+    tipo: MaterialTipo;
+    data:Date;
+    qde: number;
+    
+    constructor(){
+        this.tipo = new MaterialTipo;
+        this.material = new Material;
+    }
+}
+
+export class PorSetor{
+    id: number;
+    material:Material;
+    categoria: Categoria;
+    setor: Setor;
+    data: Date;
+    qtd: number;
+ 
+    constructor(){
+        this.material = new Material;
+        this.categoria = new Categoria;
+        this.setor = new Setor;
+    }
+}
+
+export class PorCategoria{
+    id: number;
+    material: Material;
+    tipo: MaterialTipo;
+    categoria: Categoria;
+    data: Date;
+    qtd: number;
+
+    constructor(){
+        this.material = new Material;
+        this.tipo = new MaterialTipo;
+        this.categoria = new Categoria;
+    }
+}
+
+export class Porfuncionario{
+    id: number;
+    material: Material;
+    categoria: Categoria;
+    funcionario: Funcionarios;
+    data: Date;
+    qtd: number;
+    
+    constructor(){
+        this.material = new Material;
+        this.funcionario = new Funcionarios;
+        this.categoria = new Categoria;
+    }
+}
